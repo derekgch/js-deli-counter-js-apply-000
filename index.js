@@ -1,8 +1,8 @@
 var katzDeli = [];
-var dailyCounter =1;
+var dailyCounter =0;
 
 function takeANumber(theLine){
-  var pos = theLine.push(dailyCounter);
+  var pos = theLine.push(dailyCounter+1);
   dailyCounter++
   return dailyCounter;
 }
