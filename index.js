@@ -2,20 +2,23 @@ var katzDeli = [];
 var dailyCounter =0;
 
 function takeANumber(theLine){
+  if(dailyCounter > 9999){
+    dailyCounter =0;
+  }
   dailyCounter++
-  var pos = theLine.push(dailyCounter);
+  var pos = theLine.push(dailyCounter);  
   return dailyCounter;
 }
 
-function nowServing(theLine){
+function nowServing(theLine){  
   if(theLine.length < 1){
     return "There is nobody waiting to be served!"
   }else {
     var name = theLine.shift()
     return `Currently serving ${name}.`
   }
-
 }
+
 
 function currentLine (theLine){
   if(theLine.length < 1){
