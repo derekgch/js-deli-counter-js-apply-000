@@ -1,8 +1,10 @@
 var katzDeli = [];
+var dailyCounter =0;
 
-function takeANumber(theLine, name){
-  var pos = theLine.push(name);
-  return `Welcome, ${name}. You are number ${pos} in line.`
+function takeANumber(theLine){
+  var pos = theLine.push(dailyCounter);
+  dailyCounter++
+  return dailyCounter;
 }
 
 function nowServing(theLine){
